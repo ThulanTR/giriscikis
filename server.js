@@ -5,7 +5,6 @@ const { initDatabase } = require('./src/database');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-});
 
 // Veritabanını başlat
 initDatabase();
