@@ -5,8 +5,6 @@ const { initDatabase } = require('./src/database');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Sunucu ${PORT} portunda aktif.`);
 });
 
 // Veritabanını başlat
@@ -41,7 +39,7 @@ app.get('*', (req, res) => {
 });
 
 // Sunucuyu Başlat
-// app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log('====================================================');
   console.log('🚀 PERSONEL TAKİP VE FİNANS YÖNETİM SİSTEMİ ÇALIŞIYOR');
   console.log('====================================================');
