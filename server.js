@@ -41,7 +41,7 @@ app.get('*', (req, res) => {
 });
 
 // Sunucuyu Başlat
-app.listen(PORT, () => {
+// app.listen(PORT, () => {
   console.log('====================================================');
   console.log('🚀 PERSONEL TAKİP VE FİNANS YÖNETİM SİSTEMİ ÇALIŞIYOR');
   console.log('====================================================');
