@@ -425,22 +425,19 @@
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         
         <div class="glass-card rounded-2xl p-4.5 border border-slate-700/60">
-          <div class="text-xs font-medium text-slate-400 mb-1">Toplam Kasa Çıkışı</div>
+          <div class="text-xs font-medium text-slate-400 mb-1">Toplam Alınan Ödeme</div>
           <div id="financeSummaryTotal" class="text-2xl font-bold font-heading text-white">CAD$ 0.00</div>
-          <div class="text-[11px] text-slate-500 mt-1">Kayıtlı tüm ödemeler</div>
-        </div>
+               </div>
 
         <div class="glass-card rounded-2xl p-4.5 border border-slate-700/60">
-          <div class="text-xs font-medium text-slate-400 mb-1">Bu Ayki Harcama</div>
+          <div class="text-xs font-medium text-slate-400 mb-1">Bu Ayki Alınan Ödemeler</div>
           <div id="financeSummaryThisMonth" class="text-2xl font-bold font-heading text-emerald-400">CAD$ 0.00</div>
-          <div class="text-[11px] text-slate-500 mt-1">Cari ay içi ödemeler</div>
-        </div>
+                </div>
 
         <div class="glass-card rounded-2xl p-4.5 border border-slate-700/60">
-          <div class="text-xs font-medium text-slate-400 mb-1">Toplam Ödeme Sayısı</div>
+          <div class="text-xs font-medium text-slate-400 mb-1">Toplam Alınan Ödeme Sayısı</div>
           <div id="financeSummaryCount" class="text-2xl font-bold font-heading text-indigo-400">0 İşlem</div>
-          <div class="text-[11px] text-slate-500 mt-1">Fatura, maaş ve gider kaydı</div>
-        </div>
+                 </div>
 
       </div>
 
@@ -455,9 +452,8 @@
               <i data-lucide="plus-circle" class="w-4 h-4 text-emerald-400"></i>
             </div>
             <div>
-              <h3 class="font-heading font-bold text-white text-base">Yeni Ödeme Kaydı Ekle</h3>
-              <p class="text-xs text-slate-400">Maaş, avans veya şantiye gideri kaydedin</p>
-            </div>
+              <h3 class="font-heading font-bold text-white text-base">Yeni Para Girişi</h3>
+                     </div>
           </div>
 
           <form id="paymentForm" class="space-y-4">
@@ -493,13 +489,13 @@
             <!-- Alıcı / Personel / Konu -->
             <div>
               <label for="paymentRecipient" class="block text-xs font-medium text-slate-300 mb-1">
-                Alıcı / Personel / Konu <span class="text-rose-400">*</span>
+                Ödemeyi yapan ve İş Detayı <span class="text-rose-400">*</span>
               </label>
               <input 
                 type="text" 
                 id="paymentRecipient" 
                 required 
-                placeholder="Örn: Ahmet Yılmaz veya Şantiye Market" 
+                placeholder="Örn: Ahmet Yılmaz * Şantiye Market" 
                 class="w-full px-3.5 py-2.5 rounded-xl custom-input text-xs sm:text-sm"
               >
             </div>
@@ -511,10 +507,9 @@
                   Kategori <span class="text-rose-400">*</span>
                 </label>
                 <select id="paymentCategory" required class="w-full px-3 py-2.5 rounded-xl custom-input text-xs">
-                  <option value="Maaş">Maaş</option>
+                  <option value="Maaş">Invoice</option>
                   <option value="Avans">Avans</option>
                   <option value="Malzeme/Gider">Malzeme/Gider</option>
-                  <option value="Yemek/Yol">Yemek/Yol</option>
                   <option value="Prim">Prim</option>
                   <option value="Diğer">Diğer</option>
                 </select>
@@ -525,8 +520,6 @@
                 <select id="paymentMethod" class="w-full px-3 py-2.5 rounded-xl custom-input text-xs">
                   <option value="Nakit">Nakit</option>
                   <option value="Banka/Havale">Banka / Havale</option>
-                  <option value="Kredi Kartı">Kredi Kartı</option>
-                  <option value="Çek/Senet">Çek / Senet</option>
                 </select>
               </div>
             </div>
@@ -564,7 +557,7 @@
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pb-2 border-b border-slate-800">
             <div class="flex items-center gap-2">
               <i data-lucide="receipt" class="w-4 h-4 text-emerald-400"></i>
-              <h3 class="font-heading font-bold text-slate-200 text-base">Ödeme Geçmişi ve Kasa Çıkışları</h3>
+              <h3 class="font-heading font-bold text-slate-200 text-base">Alınan Ödeme Geçmişi</h3>
             </div>
             
             <div class="flex items-center gap-2">
@@ -583,10 +576,9 @@
             <div>
               <select id="paymentCategoryFilter" class="w-full px-3 py-1.5 rounded-lg custom-input text-xs">
                 <option value="">Tüm Kategoriler</option>
-                <option value="Maaş">Maaş</option>
+                <option value="Maaş">Invoice</option>
                 <option value="Avans">Avans</option>
                 <option value="Malzeme/Gider">Malzeme/Gider</option>
-                <option value="Yemek/Yol">Yemek/Yol</option>
                 <option value="Prim">Prim</option>
                 <option value="Diğer">Diğer</option>
               </select>
